@@ -1,0 +1,17 @@
+C:\ProyectoPractica\Corteros\Corteros\bin\Debug\Corteros.exe.config
+C:\ProyectoPractica\Corteros\Corteros\bin\Debug\Corteros.exe
+C:\ProyectoPractica\Corteros\Corteros\bin\Debug\Corteros.pdb
+C:\ProyectoPractica\Corteros\Corteros\obj\Debug\Corteros.csproj.AssemblyReference.cache
+C:\ProyectoPractica\Corteros\Corteros\obj\Debug\Corteros.csproj.SuggestedBindingRedirects.cache
+C:\ProyectoPractica\Corteros\Corteros\obj\Debug\Corteros.Properties.Resources.resources
+C:\ProyectoPractica\Corteros\Corteros\obj\Debug\Corteros.csproj.GenerateResource.cache
+C:\ProyectoPractica\Corteros\Corteros\obj\Debug\Corteros.csproj.CoreCompileInputs.cache
+C:\ProyectoPractica\Corteros\Corteros\obj\Debug\Corteros.exe
+C:\ProyectoPractica\Corteros\Corteros\obj\Debug\Corteros.pdb
+C:\ProyectoPractica\Corteros\Corteros\obj\Debug\Corteros.FrmFrente.resources
+C:\ProyectoPractica\Corteros\Corteros\obj\Debug\Corteros.FrmTipoFinca.resources
+C:\ProyectoPractica\Corteros\Corteros\obj\Debug\Corteros.frmDistrito.resources
+C:\ProyectoPractica\Corteros\Corteros\obj\Debug\Corteros.FrmFinca.resources
+C:\ProyectoPractica\Corteros\Corteros\obj\Debug\Corteros.FrmEmpleado.resources
+C:\ProyectoPractica\Corteros\Corteros\obj\Debug\Corteros.FrmSupervisor.resources
+C:\ProyectoPractica\Corteros\Corteros\obj\Debug\Corteros.FrmDistanciaSiembra.resources
