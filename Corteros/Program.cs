@@ -16,7 +16,7 @@ namespace Corteros
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmDistanciaSiembra());
+            Application.Run(new PantallaDeCarga());
         }
     }
 }

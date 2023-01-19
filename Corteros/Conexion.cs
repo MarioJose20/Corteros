@@ -10,7 +10,7 @@ namespace Corteros
 {
     internal class Conexion
     {
-        static private string cadena = "Data Source = MARIOJOSE;Initial Catalog=Corteros; Integrated Security=True";
+        static private string cadena = "Data Source=LAPTOP-H2UB6CQP\\SQLEXPRESS;Initial Catalog=Corteros;Integrated Security=True";
         private SqlConnection conexion = new SqlConnection(cadena);
 
         public SqlConnection Abrir()
@@ -18,7 +18,6 @@ namespace Corteros
             if (conexion.State == System.Data.ConnectionState.Closed)
             {
                 conexion.Open();
-                //MessageBox.Show("Felicidades conexion abierta", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             return conexion;
         }
