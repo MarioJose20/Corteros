@@ -42,7 +42,7 @@ namespace Corteros
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.button1 = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
-            this.btnFrentes = new System.Windows.Forms.Button();
+            this.btnSupervisores = new System.Windows.Forms.Button();
             this.btnDistrito = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -155,7 +155,7 @@ namespace Corteros
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(117)))), ((int)(((byte)(47)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(53, 204);
             this.button1.Name = "button1";
@@ -169,7 +169,7 @@ namespace Corteros
             // 
             this.btnEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(117)))), ((int)(((byte)(47)))));
             this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpleados.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleados.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpleados.ForeColor = System.Drawing.Color.White;
             this.btnEmpleados.Location = new System.Drawing.Point(360, 204);
             this.btnEmpleados.Name = "btnEmpleados";
@@ -179,24 +179,25 @@ namespace Corteros
             this.btnEmpleados.UseVisualStyleBackColor = false;
             this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
-            // btnFrentes
+            // btnSupervisores
             // 
-            this.btnFrentes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(117)))), ((int)(((byte)(47)))));
-            this.btnFrentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFrentes.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFrentes.ForeColor = System.Drawing.Color.White;
-            this.btnFrentes.Location = new System.Drawing.Point(973, 204);
-            this.btnFrentes.Name = "btnFrentes";
-            this.btnFrentes.Size = new System.Drawing.Size(218, 194);
-            this.btnFrentes.TabIndex = 96;
-            this.btnFrentes.Text = "Frentes";
-            this.btnFrentes.UseVisualStyleBackColor = false;
+            this.btnSupervisores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(117)))), ((int)(((byte)(47)))));
+            this.btnSupervisores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupervisores.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupervisores.ForeColor = System.Drawing.Color.White;
+            this.btnSupervisores.Location = new System.Drawing.Point(973, 204);
+            this.btnSupervisores.Name = "btnSupervisores";
+            this.btnSupervisores.Size = new System.Drawing.Size(218, 194);
+            this.btnSupervisores.TabIndex = 96;
+            this.btnSupervisores.Text = "Supervisores";
+            this.btnSupervisores.UseVisualStyleBackColor = false;
+            this.btnSupervisores.Click += new System.EventHandler(this.btnSupervisores_Click);
             // 
             // btnDistrito
             // 
             this.btnDistrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(117)))), ((int)(((byte)(47)))));
             this.btnDistrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDistrito.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDistrito.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDistrito.ForeColor = System.Drawing.Color.White;
             this.btnDistrito.Location = new System.Drawing.Point(666, 204);
             this.btnDistrito.Name = "btnDistrito";
@@ -204,6 +205,7 @@ namespace Corteros
             this.btnDistrito.TabIndex = 95;
             this.btnDistrito.Text = "Distrito";
             this.btnDistrito.UseVisualStyleBackColor = false;
+            this.btnDistrito.Click += new System.EventHandler(this.btnDistrito_Click);
             // 
             // FrmMenu
             // 
@@ -211,7 +213,7 @@ namespace Corteros
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(167)))), ((int)(((byte)(84)))));
             this.ClientSize = new System.Drawing.Size(1300, 720);
-            this.Controls.Add(this.btnFrentes);
+            this.Controls.Add(this.btnSupervisores);
             this.Controls.Add(this.btnDistrito);
             this.Controls.Add(this.btnEmpleados);
             this.Controls.Add(this.button1);
@@ -246,7 +248,7 @@ namespace Corteros
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnEmpleados;
-        private System.Windows.Forms.Button btnFrentes;
+        private System.Windows.Forms.Button btnSupervisores;
         private System.Windows.Forms.Button btnDistrito;
     }
 }

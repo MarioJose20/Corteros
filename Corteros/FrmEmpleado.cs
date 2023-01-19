@@ -227,5 +227,12 @@ namespace Corteros
         {
             validaciones.soloLetras(e);
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            FrmMenu menu = new FrmMenu();
+            this.Hide();
+            menu.Show();
+        }
     }
 }

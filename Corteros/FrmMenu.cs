@@ -14,6 +14,8 @@ namespace Corteros
     {
         FrmFinca Finca = new FrmFinca();
         FrmEmpleado Empleados = new FrmEmpleado();
+        frmDistrito Distrito = new frmDistrito();
+        FrmSupervisor Super = new FrmSupervisor();
 
         public FrmMenu()
         {
@@ -39,12 +41,26 @@ namespace Corteros
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Finca.ShowDialog();
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Empleados.ShowDialog();
+        }
+
+        private void btnDistrito_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Distrito.ShowDialog();
+        }
+
+        private void btnSupervisores_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Super.ShowDialog();
         }
     }
 }

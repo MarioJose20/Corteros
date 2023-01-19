@@ -57,7 +57,44 @@ namespace Corteros
         }
         string id;
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            procedimientos.Buscar(dgvListado, "select s.idSupervisor [Id], s.DNI [Dni], s.nombreSupervisor [Nombres]," +
+                " s.apellidoSupervisor [Apellidos], s.fechaIngreso [Fecha de ingreso], s.celularSupervisor [Celular], " +
+                "s.direccionSupervisor [Dirección], s.ciudad [Ciudad], s.departamento [Departamento], s.pais [País], " +
+                "f.nombreFrente [Frente], s.estado [Estado] from Supervisor s inner join Frente f on s.idFrente = f.idFrente " +
+                "where s.estado = 'Activo' and DNI like '%" + txtBuscar.Text +  "%'");
+        }
+
+        private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.soloNumeros(e);
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.soloLetras(e);
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.soloLetras(e);
+        }
+
+        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.soloNumeros(e);
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            FrmMenu menu = new FrmMenu();
+            this.Hide();
+            menu.Show();
+        }
+
+        private void btnAgregar2_Click(object sender, EventArgs e)
         {
             try
             {
@@ -99,7 +136,7 @@ namespace Corteros
             }
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
+        private void btnActualizar2_Click(object sender, EventArgs e)
         {
             try
             {
@@ -134,7 +171,7 @@ namespace Corteros
             }
         }
 
-        private void dgvListado_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvListado_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             txtDni.Text = dgvListado.CurrentRow.Cells[1].Value.ToString();
             txtNombre.Text = dgvListado.CurrentRow.Cells[2].Value.ToString();
@@ -152,7 +189,7 @@ namespace Corteros
             btnActualizarEstado.Enabled = true;
         }
 
-        private void btnActualizarEstado_Click(object sender, EventArgs e)
+        private void btnActualizarEstado2_Click(object sender, EventArgs e)
         {
             try
             {
@@ -171,38 +208,9 @@ namespace Corteros
             }
         }
 
-        private void btnBorrar_Click(object sender, EventArgs e)
+        private void btnBorrar2_Click(object sender, EventArgs e)
         {
             Limpiar();
-        }
-
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-            procedimientos.Buscar(dgvListado, "select s.idSupervisor [Id], s.DNI [Dni], s.nombreSupervisor [Nombres]," +
-                " s.apellidoSupervisor [Apellidos], s.fechaIngreso [Fecha de ingreso], s.celularSupervisor [Celular], " +
-                "s.direccionSupervisor [Dirección], s.ciudad [Ciudad], s.departamento [Departamento], s.pais [País], " +
-                "f.nombreFrente [Frente], s.estado [Estado] from Supervisor s inner join Frente f on s.idFrente = f.idFrente " +
-                "where s.estado = 'Activo' and DNI like '%" + txtBuscar.Text +  "%'");
-        }
-
-        private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            validaciones.soloNumeros(e);
-        }
-
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            validaciones.soloLetras(e);
-        }
-
-        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            validaciones.soloLetras(e);
-        }
-
-        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            validaciones.soloNumeros(e);
         }
     }
 }

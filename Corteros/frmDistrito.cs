@@ -57,14 +57,6 @@ namespace Corteros
             btnAgregar.Enabled = true;
             btnActualizarEstado.Enabled = false;
         }
-        private void dgvDistrito_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtDistrito.Text = dgvDistrito.CurrentRow.Cells[1].Value.ToString();
-            id = dgvDistrito.CurrentRow.Cells[0].Value.ToString();
-            btnAgregar.Enabled = false;
-            btnActualizar.Enabled = true;
-            btnActualizarEstado.Enabled = true;
-        }
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             try
@@ -123,6 +115,22 @@ namespace Corteros
         private void txtBuscarDistrito_TextChanged(object sender, EventArgs e)
         {
             procedimientos.Buscar(dgvDistrito, "select d.idDistrito [ID], d.nombreDistrito [Distrito], d.estado [Estado] from Distrito d where d.estado = 'Activo' and nombreDistrito like '%" + txtBuscarDistrito.Text + "%'");
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            FrmMenu menu = new FrmMenu();
+            this.Hide();
+            menu.Show();
+        }
+
+        private void dgvDistrito_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtDistrito.Text = dgvDistrito.CurrentRow.Cells[1].Value.ToString();
+            id = dgvDistrito.CurrentRow.Cells[0].Value.ToString();
+            btnAgregar.Enabled = false;
+            btnActualizar.Enabled = true;
+            btnActualizarEstado.Enabled = true;
         }
     }
 }
