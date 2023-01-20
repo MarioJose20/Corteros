@@ -16,6 +16,8 @@ namespace Corteros
         FrmEmpleado Empleados = new FrmEmpleado();
         frmDistrito Distrito = new frmDistrito();
         FrmSupervisor Super = new FrmSupervisor();
+        FrmFrente frente = new FrmFrente();
+        FrmDistanciaSiembra Distancia = new FrmDistanciaSiembra();
 
         public FrmMenu()
         {
@@ -61,6 +63,18 @@ namespace Corteros
         {
             this.Hide();
             Super.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frente.ShowDialog();
+        }
+
+        private void btnDistancia_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Distancia.ShowDialog();
         }
     }
 }

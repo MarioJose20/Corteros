@@ -44,6 +44,10 @@ namespace Corteros
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.btnSupervisores = new System.Windows.Forms.Button();
             this.btnDistrito = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnDistancia = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
@@ -59,7 +63,7 @@ namespace Corteros
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.ReadOnly = true;
             this.lblFecha.ShortcutsEnabled = false;
-            this.lblFecha.Size = new System.Drawing.Size(1208, 74);
+            this.lblFecha.Size = new System.Drawing.Size(1208, 59);
             this.lblFecha.TabIndex = 90;
             this.lblFecha.Text = "00/00/00";
             this.lblFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -84,7 +88,7 @@ namespace Corteros
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(585, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 40);
+            this.label4.Size = new System.Drawing.Size(91, 32);
             this.label4.TabIndex = 135;
             this.label4.Text = "MENU";
             // 
@@ -133,7 +137,7 @@ namespace Corteros
             this.lblHora.Name = "lblHora";
             this.lblHora.ReadOnly = true;
             this.lblHora.ShortcutsEnabled = false;
-            this.lblHora.Size = new System.Drawing.Size(613, 74);
+            this.lblHora.Size = new System.Drawing.Size(613, 59);
             this.lblHora.TabIndex = 91;
             this.lblHora.Text = "00/00/00";
             this.lblHora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -143,10 +147,10 @@ namespace Corteros
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(-19, 627);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(-21, 619);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(1331, 10);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(1353, 20);
             this.bunifuSeparator1.TabIndex = 92;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
@@ -155,9 +159,9 @@ namespace Corteros
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(117)))), ((int)(((byte)(47)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(53, 204);
+            this.button1.Location = new System.Drawing.Point(54, 81);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(218, 194);
             this.button1.TabIndex = 93;
@@ -169,9 +173,9 @@ namespace Corteros
             // 
             this.btnEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(117)))), ((int)(((byte)(47)))));
             this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpleados.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleados.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpleados.ForeColor = System.Drawing.Color.White;
-            this.btnEmpleados.Location = new System.Drawing.Point(360, 204);
+            this.btnEmpleados.Location = new System.Drawing.Point(361, 81);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Size = new System.Drawing.Size(218, 194);
             this.btnEmpleados.TabIndex = 94;
@@ -183,9 +187,9 @@ namespace Corteros
             // 
             this.btnSupervisores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(117)))), ((int)(((byte)(47)))));
             this.btnSupervisores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSupervisores.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupervisores.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupervisores.ForeColor = System.Drawing.Color.White;
-            this.btnSupervisores.Location = new System.Drawing.Point(973, 204);
+            this.btnSupervisores.Location = new System.Drawing.Point(974, 81);
             this.btnSupervisores.Name = "btnSupervisores";
             this.btnSupervisores.Size = new System.Drawing.Size(218, 194);
             this.btnSupervisores.TabIndex = 96;
@@ -197,9 +201,9 @@ namespace Corteros
             // 
             this.btnDistrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(117)))), ((int)(((byte)(47)))));
             this.btnDistrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDistrito.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDistrito.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDistrito.ForeColor = System.Drawing.Color.White;
-            this.btnDistrito.Location = new System.Drawing.Point(666, 204);
+            this.btnDistrito.Location = new System.Drawing.Point(667, 81);
             this.btnDistrito.Name = "btnDistrito";
             this.btnDistrito.Size = new System.Drawing.Size(218, 194);
             this.btnDistrito.TabIndex = 95;
@@ -207,12 +211,70 @@ namespace Corteros
             this.btnDistrito.UseVisualStyleBackColor = false;
             this.btnDistrito.Click += new System.EventHandler(this.btnDistrito_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(117)))), ((int)(((byte)(47)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(54, 338);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(218, 194);
+            this.button2.TabIndex = 97;
+            this.button2.Text = "Frente";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnDistancia
+            // 
+            this.btnDistancia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(117)))), ((int)(((byte)(47)))));
+            this.btnDistancia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDistancia.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDistancia.ForeColor = System.Drawing.Color.White;
+            this.btnDistancia.Location = new System.Drawing.Point(361, 338);
+            this.btnDistancia.Name = "btnDistancia";
+            this.btnDistancia.Size = new System.Drawing.Size(218, 194);
+            this.btnDistancia.TabIndex = 98;
+            this.btnDistancia.Text = "Distancia Siembra";
+            this.btnDistancia.UseVisualStyleBackColor = false;
+            this.btnDistancia.Click += new System.EventHandler(this.btnDistancia_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(117)))), ((int)(((byte)(47)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(667, 338);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(218, 194);
+            this.button4.TabIndex = 99;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(117)))), ((int)(((byte)(47)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(974, 338);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(218, 194);
+            this.button5.TabIndex = 100;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // FrmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(167)))), ((int)(((byte)(84)))));
             this.ClientSize = new System.Drawing.Size(1300, 720);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnDistancia);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnSupervisores);
             this.Controls.Add(this.btnDistrito);
             this.Controls.Add(this.btnEmpleados);
@@ -250,5 +312,9 @@ namespace Corteros
         private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.Button btnSupervisores;
         private System.Windows.Forms.Button btnDistrito;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDistancia;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

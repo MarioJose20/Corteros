@@ -89,7 +89,17 @@ namespace Corteros
             btnActualizarEstado.Enabled = false;
         }
 
-        private void dgvDistancia_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            procedimientos.Buscar(dgvDistancia, "select idDistanciaSiembra [Id], nombreDistanciaSiembra [Distancia], mLineales [Metros líneales] from DistanciaSiembra where nombreDistanciaSiembra like '%" + txtBuscar.Text + "%'");
+        }
+
+        private void dgvDistancia_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             txtDistancia.Text = dgvDistancia.CurrentRow.Cells[1].Value.ToString();
             txtMetrosL.Text = dgvDistancia.CurrentRow.Cells[2].Value.ToString();
@@ -99,14 +109,11 @@ namespace Corteros
             btnActualizarEstado.Enabled = true;
         }
 
-        private void btnBorrar_Click(object sender, EventArgs e)
+        private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Limpiar();
-        }
-
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-            procedimientos.Buscar(dgvDistancia, "select idDistanciaSiembra [Id], nombreDistanciaSiembra [Distancia], mLineales [Metros líneales] from DistanciaSiembra where nombreDistanciaSiembra like '%" + txtBuscar.Text + "%'");
+            FrmMenu menu = new FrmMenu();
+            this.Hide();
+            menu.Show();
         }
     }
 }

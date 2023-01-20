@@ -94,23 +94,6 @@ namespace Corteros
             Limpiar();
         }
 
-        private void dgvFinca_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                txtNombreFinca.Text = dgvFinca.CurrentRow.Cells[1].Value.ToString();
-                cmbDistrito.Text = dgvFinca.CurrentRow.Cells[2].Value.ToString();
-                cmbTipoFinca.Text = dgvFinca.CurrentRow.Cells[3].Value.ToString();
-                id = dgvFinca.CurrentRow.Cells[0].Value.ToString();
-                btnAgregar.Enabled = false;
-                btnActualizar.Enabled = true;
-                btnActualizarEstado.Enabled = true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
@@ -245,7 +228,25 @@ namespace Corteros
             Limpiar();
         }
 
-        private void dgvTipoFinca_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvFinca_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtNombreFinca.Text = dgvFinca.CurrentRow.Cells[1].Value.ToString();
+                cmbDistrito.Text = dgvFinca.CurrentRow.Cells[2].Value.ToString();
+                cmbTipoFinca.Text = dgvFinca.CurrentRow.Cells[3].Value.ToString();
+                id = dgvFinca.CurrentRow.Cells[0].Value.ToString();
+                btnAgregar.Enabled = false;
+                btnActualizar.Enabled = true;
+                btnActualizarEstado.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void dgvTipoFinca_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             txtTipoFinca.Text = dgvTipoFinca.CurrentRow.Cells[1].Value.ToString();
             id = dgvTipoFinca.CurrentRow.Cells[0].Value.ToString();

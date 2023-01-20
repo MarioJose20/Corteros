@@ -35,7 +35,7 @@ namespace Corteros
                 DialogResult r = MessageBox.Show("¿Desea guardar el empleado?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (r == DialogResult.Yes)
                 {
-                    if (txtApellido.Text != string.Empty && txtNombre.Text != string.Empty && txtCelular.Text != string.Empty && txtDireccion.Text != string.Empty && txtDni.Text != string.Empty && txtCiudad.Text != string.Empty)
+                    if (txtApellido.Text != string.Empty && txtNombre.Text != string.Empty && txtCelular2.Text != string.Empty && txtDireccion.Text != string.Empty && txtDni.Text != string.Empty && txtCiudad.Text != string.Empty)
                     {
                         if (dtFechaNacimiento.Value.Date.AddYears(18) <= DateTime.Today)
                         {
@@ -45,7 +45,7 @@ namespace Corteros
                                 {
                                     if (txtApellido.Text != " ")
                                     {
-                                        procedimientos.InsertarEmpleado(txtDni.Text, txtNombre.Text, txtApellido.Text, txtCelular.Text, txtDireccion.Text,
+                                        procedimientos.InsertarEmpleado(txtDni.Text, txtNombre.Text, txtApellido.Text, txtCelular2.Text, txtDireccion.Text,
                                         dtFechaNacimiento.Value.Date, dtFechaIngreso.Value.Date, txtCiudad.Text, cmbDepartamento.Text, cmbPais.Text,
                                         cmbEstadoCivil.Text);
                                         MessageBox.Show("Empleado guardado con éxito!", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -95,7 +95,7 @@ namespace Corteros
             txtDni.Text = string.Empty;
             txtNombre.Text = string.Empty;
             txtApellido.Text = string.Empty;
-            txtCelular.Text = string.Empty;
+            txtCelular2.Text = string.Empty;
             txtDireccion.Text = string.Empty;
             dtFechaNacimiento.Value = DateTime.Today;
             dtFechaIngreso.Value = DateTime.Today;
@@ -108,24 +108,6 @@ namespace Corteros
             btnActualizarEstado.Enabled = false;
         }
 
-        private void dgListado_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtDni.Text = dgListado.CurrentRow.Cells[1].Value.ToString();
-            txtNombre.Text = dgListado.CurrentRow.Cells[2].Value.ToString();
-            txtApellido.Text = dgListado.CurrentRow.Cells[3].Value.ToString();
-            txtCelular.Text = dgListado.CurrentRow.Cells[4].Value.ToString();
-            txtDireccion.Text = dgListado.CurrentRow.Cells[5].Value.ToString();
-            dtFechaNacimiento.Text = dgListado.CurrentRow.Cells[6].Value.ToString();
-            dtFechaIngreso.Text = dgListado.CurrentRow.Cells[7].Value.ToString();
-            txtCiudad.Text = dgListado.CurrentRow.Cells[8].Value.ToString();
-            cmbDepartamento.Text = dgListado.CurrentRow.Cells[9].Value.ToString();
-            cmbPais.Text = dgListado.CurrentRow.Cells[10].Value.ToString();
-            cmbEstadoCivil.Text = dgListado.CurrentRow.Cells[11].Value.ToString();
-            id = dgListado.CurrentRow.Cells[0].Value.ToString();
-            btnAgregar.Enabled = false;
-            btnActualizar.Enabled = true;
-            btnActualizarEstado.Enabled = true;
-        }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
@@ -134,14 +116,14 @@ namespace Corteros
                 DialogResult r = MessageBox.Show("¿Desea actualizar el empleado?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (r == DialogResult.Yes)
                 {
-                    if (txtApellido.Text != string.Empty && txtNombre.Text != string.Empty && txtCelular.Text != string.Empty && txtDireccion.Text != string.Empty && txtDni.Text != string.Empty && txtCiudad.Text != string.Empty)
+                    if (txtApellido.Text != string.Empty && txtNombre.Text != string.Empty && txtCelular2.Text != string.Empty && txtDireccion.Text != string.Empty && txtDni.Text != string.Empty && txtCiudad.Text != string.Empty)
                     {
                         if(dtFechaNacimiento.Value.Date.AddYears(18) <= DateTime.Today)
                         {
                             
                                 if (cmbDepartamento.Text != "Seleccione" && cmbEstadoCivil.Text != "Seleccione" && cmbPais.Text != "Seleccione")
                                 {
-                                    procedimientos.ActualizarEmpleado(int.Parse(id), txtDni.Text, txtNombre.Text, txtApellido.Text, txtCelular.Text, txtDireccion.Text,
+                                    procedimientos.ActualizarEmpleado(int.Parse(id), txtDni.Text, txtNombre.Text, txtApellido.Text, txtCelular2.Text, txtDireccion.Text,
                                     dtFechaNacimiento.Value.Date, dtFechaIngreso.Value.Date, txtCiudad.Text, cmbDepartamento.Text, cmbPais.Text,
                                     cmbEstadoCivil.Text);
                                     MessageBox.Show("Empleado actualizado con éxito!", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -205,11 +187,6 @@ namespace Corteros
             validaciones.soloLetras(e);
         }
 
-        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            validaciones.soloNumeros(e);
-        }
-
         private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
         {
             validaciones.soloNumeros(e);
@@ -233,6 +210,30 @@ namespace Corteros
             FrmMenu menu = new FrmMenu();
             this.Hide();
             menu.Show();
+        }
+
+        private void txtCelular2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.soloNumeros(e);
+        }
+
+        private void dgListado_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtDni.Text = dgListado.CurrentRow.Cells[1].Value.ToString();
+            txtNombre.Text = dgListado.CurrentRow.Cells[2].Value.ToString();
+            txtApellido.Text = dgListado.CurrentRow.Cells[3].Value.ToString();
+            txtCelular2.Text = dgListado.CurrentRow.Cells[4].Value.ToString();
+            txtDireccion.Text = dgListado.CurrentRow.Cells[5].Value.ToString();
+            dtFechaNacimiento.Text = dgListado.CurrentRow.Cells[6].Value.ToString();
+            dtFechaIngreso.Text = dgListado.CurrentRow.Cells[7].Value.ToString();
+            txtCiudad.Text = dgListado.CurrentRow.Cells[8].Value.ToString();
+            cmbDepartamento.Text = dgListado.CurrentRow.Cells[9].Value.ToString();
+            cmbPais.Text = dgListado.CurrentRow.Cells[10].Value.ToString();
+            cmbEstadoCivil.Text = dgListado.CurrentRow.Cells[11].Value.ToString();
+            id = dgListado.CurrentRow.Cells[0].Value.ToString();
+            btnAgregar.Enabled = false;
+            btnActualizar.Enabled = true;
+            btnActualizarEstado.Enabled = true;
         }
     }
 }

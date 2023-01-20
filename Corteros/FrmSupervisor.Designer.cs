@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSupervisor));
             this.txtCiudad = new System.Windows.Forms.TextBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -71,6 +72,7 @@
             this.btnAgregar2 = new System.Windows.Forms.Button();
             this.btnActualizarEstado2 = new System.Windows.Forms.Button();
             this.btnBorrar2 = new System.Windows.Forms.Button();
+            this.Mover = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -89,7 +91,7 @@
             this.txtCiudad.Location = new System.Drawing.Point(20, 281);
             this.txtCiudad.Margin = new System.Windows.Forms.Padding(6);
             this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.Size = new System.Drawing.Size(267, 32);
+            this.txtCiudad.Size = new System.Drawing.Size(267, 27);
             this.txtCiudad.TabIndex = 58;
             // 
             // txtBuscar
@@ -100,7 +102,7 @@
             this.txtBuscar.Location = new System.Drawing.Point(119, 399);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(6);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(289, 32);
+            this.txtBuscar.Size = new System.Drawing.Size(289, 27);
             this.txtBuscar.TabIndex = 57;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -112,7 +114,7 @@
             this.label14.Location = new System.Drawing.Point(20, 402);
             this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(74, 23);
+            this.label14.Size = new System.Drawing.Size(61, 21);
             this.label14.TabIndex = 56;
             this.label14.Text = "Buscar";
             // 
@@ -133,7 +135,7 @@
             this.cmbPais.Location = new System.Drawing.Point(594, 134);
             this.cmbPais.Margin = new System.Windows.Forms.Padding(6);
             this.cmbPais.Name = "cmbPais";
-            this.cmbPais.Size = new System.Drawing.Size(267, 31);
+            this.cmbPais.Size = new System.Drawing.Size(267, 29);
             this.cmbPais.TabIndex = 53;
             // 
             // cmbDepartamento
@@ -157,7 +159,7 @@
             this.cmbDepartamento.Location = new System.Drawing.Point(594, 67);
             this.cmbDepartamento.Margin = new System.Windows.Forms.Padding(6);
             this.cmbDepartamento.Name = "cmbDepartamento";
-            this.cmbDepartamento.Size = new System.Drawing.Size(267, 31);
+            this.cmbDepartamento.Size = new System.Drawing.Size(267, 29);
             this.cmbDepartamento.TabIndex = 52;
             // 
             // dtFechaIngreso
@@ -167,7 +169,7 @@
             this.dtFechaIngreso.Location = new System.Drawing.Point(303, 66);
             this.dtFechaIngreso.Margin = new System.Windows.Forms.Padding(6);
             this.dtFechaIngreso.Name = "dtFechaIngreso";
-            this.dtFechaIngreso.Size = new System.Drawing.Size(267, 30);
+            this.dtFechaIngreso.Size = new System.Drawing.Size(267, 25);
             this.dtFechaIngreso.TabIndex = 48;
             // 
             // txtApellido
@@ -179,7 +181,7 @@
             this.txtApellido.Location = new System.Drawing.Point(20, 212);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(6);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(267, 32);
+            this.txtApellido.Size = new System.Drawing.Size(267, 27);
             this.txtApellido.TabIndex = 47;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
@@ -192,7 +194,7 @@
             this.txtNombre.Location = new System.Drawing.Point(20, 133);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(6);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(267, 32);
+            this.txtNombre.Size = new System.Drawing.Size(267, 27);
             this.txtNombre.TabIndex = 46;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -205,7 +207,7 @@
             this.txtDni.Location = new System.Drawing.Point(20, 66);
             this.txtDni.Margin = new System.Windows.Forms.Padding(6);
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(267, 32);
+            this.txtDni.Size = new System.Drawing.Size(267, 27);
             this.txtDni.TabIndex = 45;
             this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDni_KeyPress);
             // 
@@ -219,7 +221,7 @@
             this.txtCelular.Location = new System.Drawing.Point(303, 212);
             this.txtCelular.Margin = new System.Windows.Forms.Padding(6);
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(267, 32);
+            this.txtCelular.Size = new System.Drawing.Size(267, 27);
             this.txtCelular.TabIndex = 50;
             this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
             // 
@@ -233,7 +235,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(303, 133);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(6);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(267, 32);
+            this.txtDireccion.Size = new System.Drawing.Size(267, 27);
             this.txtDireccion.TabIndex = 49;
             // 
             // label10
@@ -243,7 +245,7 @@
             this.label10.Location = new System.Drawing.Point(594, 102);
             this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 25);
+            this.label10.Size = new System.Drawing.Size(39, 20);
             this.label10.TabIndex = 42;
             this.label10.Text = "País";
             // 
@@ -254,7 +256,7 @@
             this.label9.Location = new System.Drawing.Point(594, 33);
             this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 25);
+            this.label9.Size = new System.Drawing.Size(112, 20);
             this.label9.TabIndex = 41;
             this.label9.Text = "Departamento";
             // 
@@ -265,7 +267,7 @@
             this.label8.Location = new System.Drawing.Point(20, 250);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 25);
+            this.label8.Size = new System.Drawing.Size(59, 20);
             this.label8.TabIndex = 40;
             this.label8.Text = "Ciudad";
             // 
@@ -276,7 +278,7 @@
             this.label7.Location = new System.Drawing.Point(594, 176);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 25);
+            this.label7.Size = new System.Drawing.Size(56, 20);
             this.label7.TabIndex = 39;
             this.label7.Text = "Frente";
             // 
@@ -287,7 +289,7 @@
             this.label6.Location = new System.Drawing.Point(303, 33);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 25);
+            this.label6.Size = new System.Drawing.Size(132, 20);
             this.label6.TabIndex = 38;
             this.label6.Text = "Fecha de ingreso";
             // 
@@ -298,7 +300,7 @@
             this.label5.Location = new System.Drawing.Point(303, 102);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 25);
+            this.label5.Size = new System.Drawing.Size(75, 20);
             this.label5.TabIndex = 37;
             this.label5.Text = "Dirección";
             // 
@@ -309,7 +311,7 @@
             this.label4.Location = new System.Drawing.Point(303, 176);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(170, 25);
+            this.label4.Size = new System.Drawing.Size(137, 20);
             this.label4.TabIndex = 36;
             this.label4.Text = "Número de celular";
             // 
@@ -320,7 +322,7 @@
             this.label3.Location = new System.Drawing.Point(20, 176);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 25);
+            this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 35;
             this.label3.Text = "Apellidos";
             // 
@@ -331,7 +333,7 @@
             this.label2.Location = new System.Drawing.Point(20, 102);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 25);
+            this.label2.Size = new System.Drawing.Size(73, 20);
             this.label2.TabIndex = 34;
             this.label2.Text = "Nombres";
             // 
@@ -342,7 +344,7 @@
             this.label1.Location = new System.Drawing.Point(15, 33);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 25);
+            this.label1.Size = new System.Drawing.Size(37, 20);
             this.label1.TabIndex = 33;
             this.label1.Text = "DNI";
             // 
@@ -395,7 +397,7 @@
             this.cmbFrente.Location = new System.Drawing.Point(594, 213);
             this.cmbFrente.Margin = new System.Windows.Forms.Padding(6);
             this.cmbFrente.Name = "cmbFrente";
-            this.cmbFrente.Size = new System.Drawing.Size(267, 31);
+            this.cmbFrente.Size = new System.Drawing.Size(267, 29);
             this.cmbFrente.TabIndex = 64;
             // 
             // dgvListado
@@ -404,54 +406,54 @@
             this.dgvListado.AllowUserToDeleteRows = false;
             this.dgvListado.AllowUserToOrderColumns = true;
             this.dgvListado.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvListado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvListado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvListado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvListado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(167)))), ((int)(((byte)(84)))));
             this.dgvListado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvListado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgvListado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(88)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(117)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(88)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(117)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvListado.ColumnHeadersHeight = 40;
             this.dgvListado.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(163)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListado.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(163)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListado.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvListado.EnableHeadersVisualStyles = false;
             this.dgvListado.GridColor = System.Drawing.Color.Gray;
             this.dgvListado.Location = new System.Drawing.Point(14, 441);
             this.dgvListado.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dgvListado.Name = "dgvListado";
             this.dgvListado.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(85)))), ((int)(((byte)(39)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(41)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListado.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(85)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(41)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListado.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvListado.RowHeadersVisible = false;
             this.dgvListado.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(85)))), ((int)(((byte)(39)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(41)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvListado.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(85)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(41)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvListado.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvListado.RowTemplate.Height = 24;
             this.dgvListado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -477,9 +479,9 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(525, 4);
+            this.label11.Location = new System.Drawing.Point(550, 4);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(251, 40);
+            this.label11.Size = new System.Drawing.Size(200, 32);
             this.label11.TabIndex = 135;
             this.label11.Text = "SUPERVISORES";
             // 
@@ -612,9 +614,16 @@
             this.btnBorrar2.UseVisualStyleBackColor = false;
             this.btnBorrar2.Click += new System.EventHandler(this.btnBorrar2_Click);
             // 
+            // Mover
+            // 
+            this.Mover.Fixed = true;
+            this.Mover.Horizontal = true;
+            this.Mover.TargetControl = this.panel1;
+            this.Mover.Vertical = true;
+            // 
             // FrmSupervisor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(167)))), ((int)(((byte)(84)))));
             this.ClientSize = new System.Drawing.Size(1300, 720);
@@ -688,5 +697,6 @@
         private System.Windows.Forms.Button btnAgregar2;
         private System.Windows.Forms.Button btnActualizarEstado2;
         private System.Windows.Forms.Button btnBorrar2;
+        private Bunifu.Framework.UI.BunifuDragControl Mover;
     }
 }

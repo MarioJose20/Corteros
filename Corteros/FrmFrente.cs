@@ -82,15 +82,7 @@ namespace Corteros
             btnActualizar.Enabled = false; btnActualizar.Enabled = false;
         }
 
-        private void dgvFrente_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtCodigoFrente.Text = dgvFrente.CurrentRow.Cells[1].Value.ToString();
-            txtNombreFrente.Text = dgvFrente.CurrentRow.Cells[2].Value.ToString();
-            id = dgvFrente.CurrentRow.Cells[0].Value.ToString();
-            btnAgregar.Enabled = false;
-            btnActualizar.Enabled = true;
-            btnActualizarEstado.Enabled = true;
-        }
+   
         private void Limpiar()
         {
             txtCodigoFrente.Text = string.Empty;
@@ -127,6 +119,23 @@ namespace Corteros
         private void txtBuscarFrente_TextChanged(object sender, EventArgs e)
         {
             procedimientos.Buscar(dgvFrente, "select f.idFrente [ID], f.codFrente [Código frente], f.nombreFrente [Nombre frente], f.estado [Estado] from Frente as f where f.estado = 'Activo' and codFrente like '%" + txtBuscarFrente.Text + "%'");
+        }
+
+        private void dgvFrente_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCodigoFrente.Text = dgvFrente.CurrentRow.Cells[1].Value.ToString();
+            txtNombreFrente.Text = dgvFrente.CurrentRow.Cells[2].Value.ToString();
+            id = dgvFrente.CurrentRow.Cells[0].Value.ToString();
+            btnAgregar.Enabled = false;
+            btnActualizar.Enabled = true;
+            btnActualizarEstado.Enabled = true;
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            FrmMenu menu = new FrmMenu();
+            this.Hide();
+            menu.Show();
         }
     }
 }
